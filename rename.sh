@@ -21,6 +21,7 @@ for filename in files:
                 new_contents = contents.replace('Sunrise', new_name.capitalize())
                 file.seek(0)
                 file.write(new_contents)
+                file.close()
 
     if 'sunrise' in filename:
         os.rename(filename, filename.replace('sunrise', new_name))
