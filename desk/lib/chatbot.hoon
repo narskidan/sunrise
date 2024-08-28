@@ -1,7 +1,7 @@
-  ::  /lib/sunrise
+  ::  /lib/chatbot
 ::::
 ::
-/-  *sunrise
+/-  *chatbot
 |%
 ++  do-nothing  !!
 --

@@ -1,10 +1,10 @@
-  ::  /app/sunrise
+  ::  /app/chatbot
 ::::
 ::
-/-  *sunrise
+/-  *chatbot
 /+  dbug,
     default-agent,
-    *sunrise,
+    *chatbot,
     verb
 |%
 +$  versioned-state
@@ -28,7 +28,7 @@
     aux      ~(. +> bowl)
 ++  on-init
   ^-  [(list card) _this]
-  ~&  >  "%sunrise initialized successfully."
+  ~&  >  "%chatbot initialized successfully."
   :-  :~  [%pass /eyre/connect %arvo %e %connect [~ /apps/[dap.bowl]] dap.bowl]
       ==
   this
@@ -46,7 +46,7 @@
   ^-  [(list card) _this]
   =^  cards  state
     ?+    mark  (on-poke:default mark vase)
-        %sunrise-action
+        %chatbot-action
       (take-action !<(action vase))
     ==
   [cards this]
@@ -95,7 +95,7 @@
 ++  send-update
   |=  =term
   ^-  [(list card) _state]
-  :-  :~  [%give %fact ~ %sunrise-update !>(`update`[%risen values])]
+  :-  :~  [%give %fact ~ %chatbot-update !>(`update`[%risen values])]
       ==
   state
 --
